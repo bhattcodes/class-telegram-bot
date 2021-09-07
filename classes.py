@@ -82,7 +82,7 @@ def checker():
 
     # print(time_hour,time_min,week_day)
 
-    if ( time_hour==15 & time_min==10 ):
+    if ( time_hour==16 & time_min==0 ):
         
         if (week_day==0):
             sendMessage(classes_0[0]["message"])
@@ -95,7 +95,7 @@ def checker():
         elif (week_day==4):
             sendMessage(classes_4[0]["message"])
 
-    if ( time_hour==15 & time_min==11 ):
+    if ( time_hour==16 & time_min==1 ):
         
         if (week_day==0):
             sendMessage(classes_0[1]["message"])
@@ -108,7 +108,7 @@ def checker():
         elif (week_day==4):
             sendMessage(classes_4[1]["message"])
 
-    if ( time_hour==15 & time_min==12 ):
+    if ( time_hour==16 & time_min==2 ):
         
         if (week_day==0):
             sendMessage(classes_0[2]["message"])
@@ -121,7 +121,7 @@ def checker():
         elif (week_day==4):
             sendMessage(classes_4[2]["message"])
 
-    if ( time_hour==15 & time_min==13 ):
+    if ( time_hour==16 & time_min==3 ):
         
         if (week_day==0):
             sendMessage(classes_0[3]["message"])
@@ -134,7 +134,7 @@ def checker():
         elif (week_day==4):
             sendMessage(classes_4[3]["message"])
 
-    if ( time_hour==15 & time_min==14 ):
+    if ( time_hour==16 & time_min==4 ):
         
         if (week_day==0):
             sendMessage(classes_0[4]["message"])
@@ -147,7 +147,7 @@ def checker():
         elif (week_day==4):
             sendMessage(classes_4[4]["message"])
 
-    if ( time_hour==15 & time_min==15 ):
+    if ( time_hour==16 & time_min==5 ):
         
         if (week_day==0):
             sendMessage(classes_0[5]["message"])
