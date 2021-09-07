@@ -155,7 +155,6 @@ def checker():
             sendMessage(classes_4[5]["message"])
 
 
-
 sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder😁")
 
 def main():
