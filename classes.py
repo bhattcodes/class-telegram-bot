@@ -98,7 +98,7 @@ classes_4 = [
 
 
 def sendMessage(msg):
-    base_url = 'https://api.telegram.org/bot1975468404:AAF8tX79VN2DY9MiG-VFdysjjBVpsR9H08I/sendMessage?chat_id=-442028738&text="{}"'.format(
+    base_url = 'https://api.telegram.org/bot1974804373:AAHNUJZPvh639GHjP1u0aOBl6rgY_iPVuo0/sendMessage?chat_id=-1001259483889&text="{}"'.format(
         msg)
     requests.get(base_url)
 
