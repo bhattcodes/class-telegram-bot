@@ -118,7 +118,7 @@ def checker():
           datetimeIN.day), datetimeIN.time().hour, datetimeIN.time().minute)
     # print(time_hour,time_min,week_day)
 
-    if time_hour == 17 and time_min == 0 :
+    if time_hour == 9 and time_min == 9 :
         print("class 1 Time")
         if (week_day == 0):
             sendMessage(classes_0[0]["message"])
@@ -131,7 +131,7 @@ def checker():
         elif (week_day == 4):
             sendMessage(classes_4[0]["message"])
 
-    if (time_hour == 17 and time_min == 15):
+    if (time_hour == 10 and time_min == 9):
         print("class 2 Time")
 
         if (week_day == 0):
@@ -145,7 +145,7 @@ def checker():
         elif (week_day == 4):
             sendMessage(classes_4[1]["message"])
 
-    if (time_hour == 17 and time_min == 20):
+    if (time_hour == 11 and time_min == 9):
         print("class 3 Time")
 
         if (week_day == 0):
@@ -159,7 +159,7 @@ def checker():
         elif (week_day == 4):
             sendMessage(classes_4[2]["message"])
 
-    if (time_hour == 17 and time_min == 25):
+    if (time_hour == 12 and time_min == 9):
         print("class 4 Time")
 
         if (week_day == 0):
@@ -173,7 +173,7 @@ def checker():
         elif (week_day == 4):
             sendMessage(classes_4[3]["message"])
 
-    if (time_hour == 17 and time_min == 30):
+    if (time_hour == 13 and time_min == 49):
         print("class 5 Time")
 
         if (week_day == 0):
@@ -187,7 +187,7 @@ def checker():
         elif (week_day == 4):
             sendMessage(classes_4[4]["message"])
 
-    if (time_hour == 17 and time_min == 35):
+    if (time_hour == 14 and time_min == 39):
         print("class 6 Time")
 
         if (week_day == 0):
@@ -203,6 +203,7 @@ def checker():
 
 
 sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder😁")
+print(classes_0)
 
 
 while True:
