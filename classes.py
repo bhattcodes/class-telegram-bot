@@ -159,7 +159,9 @@ sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder😁")
 
 def main():
     # Loop here
-    print("checker is running")
+    print("checker is running",time.localtime().tm_wday
+    ,time.localtime().tm_hour
+    ,time.localtime().tm_min)
     checker()
     time.sleep(60)
 
