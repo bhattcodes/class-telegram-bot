@@ -1,5 +1,11 @@
 import time
+from datetime import datetime    
+import pytz    
+import calendar
 import requests
+
+tz_IN = pytz.timezone('Asia/Kolkata')   
+datetimeIN = datetime.now(tz_IN)  
 
 # Monday
 classes_0 = [   
@@ -70,9 +76,9 @@ def sendMessage(msg):
 
 
 def checker():
-    week_day=time.localtime().tm_wday
-    time_hour=time.localtime().tm_hour
-    time_min=time.localtime().tm_min
+    week_day=calendar.weekday( datetimeIN.year, datetimeIN.month, datetimeIN.day)
+    time_hour=datetimeIN.time().hour
+    time_min=datetimeIN.time().minute
 
     # print(time_hour,time_min,week_day)
 
