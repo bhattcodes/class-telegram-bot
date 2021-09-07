@@ -1,1 +1,1 @@
-worker : python classes.py
+worker: python classes.py
