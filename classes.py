@@ -160,6 +160,7 @@ sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder😁")
 
 def main():
     # Loop here
+    print("checker is running")
     checker()
     time.sleep(60)
 
