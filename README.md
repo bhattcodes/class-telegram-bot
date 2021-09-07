@@ -1,4 +1,4 @@
-# Python Program to Automate Sending Messages on Telegram Groups:
+# CLASS TELEGRAM BOT
 
 
 Here is the High Level Steps Description: </br>
