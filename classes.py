@@ -1,17 +1,18 @@
 import time
+from datetime import datetime
+import pytz
+import calendar
 import requests
 
+ 
 # Monday
-classes_0 = [   
-
-    {"time_hour" : "9", "time_min": "10" , "message" : "Class: Data Mining and Analytics\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"},
+classes_0 = [
+   {"time_hour" : "9", "time_min": "10" , "message" : "Class: Data Mining and Analytics\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"},
     {"time_hour" : "10", "time_min": "10" , "message" : "Class: Computer Networks\nFaculty : Shiva Soni\nMeet Link: https://meet.google.com/odu-ypiw-ewp\nGCR Link : https://bit.ly/ComputerNetworksGCR"},
     {"time_hour" : "11", "time_min": "10" , "message" : "Class: Formal Language and Automata\nFaculty : Abhishek Singh\nMeet Link: https://meet.google.com/zif-minn-uzr\nGCR Link : https://bit.ly/AutomataGCR"},
     {"time_hour" : "13", "time_min": "50" , "message" : "Class: Mathematics\nFaculty : Shikha Bansal\nMeet Link: https://meet.google.com/ddk-tvgf-qkf\nGCR Link : https://bit.ly/MathematicsGCR"},
-    {"time_hour" : "14", "time_min": "40" , "message" : "Class: MOOC\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"},
-
-
-    ]
+    {"time_hour" : "14", "time_min": "40" , "message" : "Class: MOOC\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"}
+]
 
 # Tuesday
 classes_1 = [   
@@ -61,6 +62,7 @@ classes_4 = [
     
    ]
 
+
 # print(classes_0)
 
 # print(time.localtime())
@@ -71,103 +73,115 @@ classes_4 = [
 
 
 def sendMessage(msg):
-    base_url = 'https://api.telegram.org/bot1975468404:AAF8tX79VN2DY9MiG-VFdysjjBVpsR9H08I/sendMessage?chat_id=-442028738&text="{}"'.format(msg) 
+    base_url = 'https://api.telegram.org/bot1974804373:AAHNUJZPvh639GHjP1u0aOBl6rgY_iPVuo0/sendMessage?chat_id=-1001259483889&text="{}"'.format(
+        msg)
     requests.get(base_url)
 
 
 def checker():
-    week_day=time.localtime().tm_wday
-    time_hour=time.localtime().tm_hour
-    time_min=time.localtime().tm_min
+  
+    tz_IN = pytz.timezone('Asia/Kolkata')
+    datetimeIN = datetime.now(tz_IN)
 
+
+    week_day = calendar.weekday(
+        datetimeIN.year, datetimeIN.month, datetimeIN.day)
+    time_hour = datetimeIN.time().hour
+    time_min = datetimeIN.time().minute
+
+    print("checker is running", calendar.weekday(datetimeIN.year, datetimeIN.month,
+          datetimeIN.day), datetimeIN.time().hour, datetimeIN.time().minute)
     # print(time_hour,time_min,week_day)
 
-    if ( time_hour==9 & time_min==0 ):
-        
-        if (week_day==0):
+    if time_hour == 9 and time_min == 9 :
+        print("class 1 Time")
+        if (week_day == 0):
             sendMessage(classes_0[0]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[0]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[0]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[0]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[0]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[0]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[0]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[0]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[0]["message"])
 
-    if ( time_hour==10 & time_min==9 ):
-        
-        if (week_day==0):
+    if (time_hour == 10 and time_min == 9):
+        print("class 2 Time")
+
+        if (week_day == 0):
             sendMessage(classes_0[1]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[1]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[1]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[1]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[1]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[1]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[1]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[1]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[1]["message"])
 
-    if ( time_hour==11 & time_min==9 ):
-        
-        if (week_day==0):
+    if (time_hour == 11 and time_min == 9):
+        print("class 3 Time")
+
+        if (week_day == 0):
             sendMessage(classes_0[2]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[2]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[2]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[2]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[2]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[2]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[2]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[2]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[2]["message"])
 
-    if ( time_hour==12 & time_min==9 ):
-        
-        if (week_day==0):
+    if (time_hour == 12 and time_min == 9):
+        print("class 4 Time")
+
+        if (week_day == 0):
             sendMessage(classes_0[3]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[3]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[3]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[3]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[3]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[3]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[3]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[3]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[3]["message"])
 
-    if ( time_hour==13 & time_min==49 ):
-        
-        if (week_day==0):
-            sendMessage(classes_0[4]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[4]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[4]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[4]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[4]["message"])
+    if (time_hour == 13 and time_min == 49):
+        print("class 5 Time")
 
-    if ( time_hour==14 & time_min==39 ):
-        
-        if (week_day==0):
+        if (week_day == 0):
+            sendMessage(classes_0[4]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[4]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[4]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[4]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[4]["message"])
+
+    if (time_hour == 14 and time_min == 39):
+        print("class 6 Time")
+
+        if (week_day == 0):
             sendMessage(classes_0[5]["message"])
-        elif (week_day==1):
-            sendMessage(classes_0[5]["message"])
-        elif (week_day==2):
-            sendMessage(classes_0[5]["message"])
-        elif (week_day==3):
-            sendMessage(classes_0[5]["message"])
-        elif (week_day==4):
-            sendMessage(classes_0[5]["message"])
+        elif (week_day == 1):
+            sendMessage(classes_1[5]["message"])
+        elif (week_day == 2):
+            sendMessage(classes_2[5]["message"])
+        elif (week_day == 3):
+            sendMessage(classes_3[5]["message"])
+        elif (week_day == 4):
+            sendMessage(classes_4[5]["message"])
 
 
+sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder😁")
+print(classes_0)
 
-def main():
-    # Loop here
-    checker()
-    time.sleep(60)
 
 while True:
-    sendMessage("I'm ON ! Your Friendly Neighbourhood Class Reminder 😁")
-    main()
-
+   
+    checker()
+    time.sleep(60)
