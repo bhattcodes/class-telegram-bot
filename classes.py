@@ -10,6 +10,7 @@ classes_0 = [
    {"time_hour" : "9", "time_min": "10" , "message" : "Class: Data Mining and Analytics\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"},
     {"time_hour" : "10", "time_min": "10" , "message" : "Class: Computer Networks\nFaculty : Shiva Soni\nMeet Link: https://meet.google.com/odu-ypiw-ewp\nGCR Link : https://bit.ly/ComputerNetworksGCR"},
     {"time_hour" : "11", "time_min": "10" , "message" : "Class: Formal Language and Automata\nFaculty : Abhishek Singh\nMeet Link: https://meet.google.com/zif-minn-uzr\nGCR Link : https://bit.ly/AutomataGCR"},
+    {"time_hour" : "12", "time_min": "10" , "message" : "NO CLASS!"},
     {"time_hour" : "13", "time_min": "50" , "message" : "Class: Mathematics\nFaculty : Shikha Bansal\nMeet Link: https://meet.google.com/ddk-tvgf-qkf\nGCR Link : https://bit.ly/MathematicsGCR"},
     {"time_hour" : "14", "time_min": "40" , "message" : "Class: MOOC\nFaculty : Rajiva Divivedi\nMeet Link: https://meet.google.com/jun-cauh-iyw\nGCR Link : https://bit.ly/DataMiningAnalytics"}
 ]
